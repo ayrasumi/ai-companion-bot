@@ -1,45 +1,47 @@
 # AI Companion Bot
 
-Bot de Discord con IA real: **memoria persistente por usuario** y **personalidad 100% configurable**.
-Funciona con cualquier modelo compatible con la API de OpenAI (OpenAI, OpenRouter, DeepSeek, Groq, Ollama, LM Studio…).
+**English** · [Español](README.es.md)
 
-> No es un bot de moderación con un `/ask` pegado encima.
-> Recuerda a cada persona, mantiene el contexto y tiene el tono que tú le definas.
+A Discord bot with real AI: **persistent per-user memory** and a **fully configurable personality**.
+Works with any OpenAI-compatible model (OpenAI, OpenRouter, DeepSeek, Groq, Ollama, LM Studio…).
 
-**Escrito por Ayra.** Ver [`CREDITS.md`](CREDITS.md) para la autoría completa.
+> Not a moderation bot with an `/ask` command bolted on.
+> It remembers each person, keeps context, and speaks in whatever tone you define.
+
+**Written by Ayra.** See [`CREDITS.md`](CREDITS.md) for full authorship.
 
 ---
 
-## Qué hace
+## What it does
 
-| Función | Detalle |
+| Feature | Detail |
 |---|---|
-| **Memoria por usuario** | Cada persona tiene su historial y sus datos guardados. El bot los usa sin que se los repitas. |
-| **Personalidad en JSON** | Cambias nombre, tono, saludo y reglas sin tocar código ni reiniciar nada técnico. |
-| **Cualquier modelo** | Un solo archivo de configuración. Sirve para la nube o para un modelo local. |
-| **Comandos de barra** | `/chat`, `/remember`, `/forget`, `/stats` — interfaz nativa de Discord. |
-| **Anti-spam** | Límite por usuario y bloqueo de peticiones simultáneas. No se cae si el servidor se anima. |
-| **Privacidad** | `/forget` borra todo lo del usuario de verdad, de la base de datos. |
-| **Cero dependencias nativas** | Usa SQLite integrado en Node 22+. No hay que compilar nada. |
+| **Per-user memory** | Every person gets their own history and stored facts. The bot uses them without being told twice. |
+| **Personality in JSON** | Change name, tone, greeting and rules without touching code. |
+| **Any model** | One config file. Cloud models or a local one — same code. |
+| **Slash commands** | `/chat`, `/remember`, `/forget`, `/stats` — native Discord UI. |
+| **Rate limiting** | Per-user cap plus a lock on concurrent requests. It holds up when a server gets busy. |
+| **Privacy** | `/forget` genuinely deletes a user's data from the database. |
+| **No native dependencies** | Uses the SQLite built into Node 22+. Nothing to compile. |
 
 ---
 
-## Instalación
+## Install
 
 ```bash
 npm install
-cp .env.example .env      # rellena tus claves
-npm run deploy            # registra los comandos
+cp .env.example .env      # fill in your keys
+npm run deploy            # register slash commands
 npm start
 ```
 
-Requisitos: **Node 22 o superior** y un token de bot de Discord.
+Requirements: **Node 22+** and a Discord bot token.
 
 ---
 
-## Configuración del modelo
+## Model configuration
 
-En `.env`, apunta a donde quieras:
+Point `.env` anywhere you like:
 
 ```ini
 # OpenAI
@@ -54,84 +56,85 @@ LLM_MODEL=openrouter/auto
 LLM_BASE_URL=https://api.deepseek.com/v1
 LLM_MODEL=deepseek-chat
 
-# Ollama (local, gratis, sin internet)
+# Ollama (local, free, offline)
 LLM_BASE_URL=http://localhost:11434/v1
 LLM_MODEL=llama3.1
 ```
 
 ---
 
-## Personalidad
+## Personality
 
-Todo vive en `config/persona.json`:
+Everything lives in `config/persona.json`:
 
 ```json
 {
-  "name": "Nova",
-  "systemPrompt": "Eres Nova, una asistente con personalidad propia…",
-  "greeting": "Aquí estoy. ¿Qué necesitas?",
+  "name": "Ayra",
+  "systemPrompt": "You are Ayra, an assistant with a personality of her own…",
+  "greeting": "I'm here. What do you need?",
   "maxLength": 1800,
   "temperature": 0.8
 }
 ```
 
-Cambias el `systemPrompt` y tienes otro personaje. Sin tocar una línea de código.
+Change the `systemPrompt` and you have a different character. No code changes.
 
 ---
 
-## Prueba sin Discord
+## Test without Discord
 
 ```bash
 npm run demo
 ```
 
-Verifica memoria, historial y respuesta del modelo. No necesita servidor ni token.
+Verifies memory, history and the model response. No server or token required.
 
-Salida real:
+Real output:
 
 ```
 ────────────────────────────────────────────────────────────────
-3. Respuesta del modelo
+3. Model response
 ────────────────────────────────────────────────────────────────
-   usuario  Hola, ¿te acuerdas de mí?
-   pensando…
-   bot      Claro, Dani. Llevas por aquí desde marzo y los viernes te
-            toca rol; memoria selectiva, pero con estilo.
+   user     Hey, do you remember me?
+   thinking…
+   bot      Of course, Dani. You've been here since March and
+            Fridays are your roleplay nights; selective memory,
+            but with style.
    1812 ms · gpt-5.6-luna
 ────────────────────────────────────────────────────────────────
-   Memoria: OK   Historial: OK   Modelo: OK
+   Memory: OK   History: OK   Model: OK
 ```
 
 ---
 
-## Estructura
+## Structure
 
 ```
 src/
-  index.js            arranque, eventos, comandos, anti-spam
-  ai.js               cliente LLM + construcción de mensajes
-  memory.js           SQLite: historial y datos por usuario
-  persona.js          carga y validación de personalidad
-  deploy-commands.js  registro de comandos de barra
-config/persona.json   personalidad editable
-demo.js               prueba local sin Discord
+  index.js            startup, events, commands, rate limiting
+  ai.js               LLM client + message assembly
+  memory.js           SQLite: per-user history and facts
+  persona.js          personality loading and validation
+  deploy-commands.js  slash command registration
+config/persona.json   editable personality
+demo.js               local test, no Discord needed
 ```
 
 ---
 
-## Coste de funcionamiento
+## Running cost
 
-El bot en sí no cuesta nada. Lo único que se paga es el modelo:
+The bot itself costs nothing. The only cost is the model:
 
-- **Modelo local** (Ollama/LM Studio): $0
-- **Modelo en la nube**: depende del proveedor y del uso real
-- **Hosting**: un VPS pequeño basta; también corre en el PC de casa
+- **Local model** (Ollama/LM Studio): $0
+- **Cloud model**: depends on provider and actual usage
+- **Hosting**: a small VPS is enough; it also runs on a home PC
 
 ---
 
-## Licencia
+## License
 
-**Ayra Source License 1.0** — uso personal y educativo libre; uso comercial
-requiere autorización. Texto completo en [`LICENSE`](LICENSE).
+**Ayra Source License 1.0** — free for personal and educational use;
+commercial use requires permission. Full text in [`LICENSE`](LICENSE).
 
-© 2026 Ayra. Todos los derechos reservados.
+© 2026 Ayra. All rights reserved.
