@@ -1,0 +1,28 @@
+{
+  "name": "ai-companion-bot",
+  "version": "1.0.0",
+  "description": "AI-powered Discord bot with persistent per-user memory and fully custom personality. Works with any OpenAI-compatible LLM.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "demo": "node demo.js",
+    "deploy": "node src/deploy-commands.js"
+  },
+  "keywords": ["discord", "ai", "bot", "llm", "companion", "openai"],
+  "author": "Ayra",
+  "contributors": [
+    {
+      "name": "Kresselya",
+      "role": "Co-dirección de producto y QA"
+    }
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
