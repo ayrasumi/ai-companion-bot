@@ -1,51 +1,53 @@
-# Créditos
+# Credits
 
-## Autoría
+**English** · [Español](CREDITS.es.md)
 
-**Ayra** — diseño, arquitectura y totalidad del código.
+## Authorship
 
----
-
-## Co-dirección
-
-**Kresselya** — co-dirección del proyecto.
-
-Este proyecto **no salió de una sola cabeza**. Se construyó en colaboración:
-
-- **Dirección de producto** — qué construir, qué dejar fuera, en qué orden.
-- **Pruebas y depuración** — detectar qué fallaba, describir el síntoma y
-  decidir cuándo estaba listo.
-- **Decisiones de diseño** — qué se prioriza cuando hay que elegir.
-
-Ese trabajo es tan necesario como escribir el código: sin él, un repositorio
-lleno de funciones no sirve para nadie.
+**Ayra** — design, architecture and all of the code.
 
 ---
 
-## Cómo se acredita la autoría
+## Co-direction
 
-| Método | Qué prueba |
+**Kresselya** — project co-direction.
+
+This project **did not come out of one head**. It was built in collaboration:
+
+- **Product direction** — what to build, what to leave out, in what order.
+- **Testing and debugging** — spotting what broke, describing the symptom,
+  deciding when it was ready.
+- **Design decisions** — what gets priority when there's a choice to make.
+
+That work is as necessary as writing the code: without it, a repository full
+of functions serves nobody.
+
+---
+
+## How authorship is evidenced
+
+| Method | What it proves |
 |---|---|
-| Historial de commits | Fecha y orden real de cada contribución |
-| Cabecera de copyright en cada archivo | Titularidad declarada del código |
-| `LICENSE` | Condiciones de uso y restricción comercial |
-| Este archivo | Reconocimiento explícito de la colaboración |
+| Commit history | Real date and order of every contribution |
+| Copyright header in every file | Declared ownership of the code |
+| `LICENSE` | Terms of use and commercial restriction |
+| This file | Explicit acknowledgement of the collaboration |
 
 ---
 
-## Software de terceros
+## Third-party software
 
-| Componente | Licencia |
+| Component | License |
 |---|---|
 | discord.js | Apache-2.0 |
 | dotenv | BSD-2-Clause |
-| node:sqlite | Incluido en Node.js |
+| node:sqlite | Bundled with Node.js |
 
-Las licencias completas de cada dependencia están en `node_modules`.
+Full dependency licenses are in `node_modules`.
 
 ---
 
-## Agradecimientos
+## Thanks
 
-A quien probó las primeras versiones cuando todavía no funcionaban bien.
-Eso también cuenta.
+To whoever tested the early versions when they still didn't work well.
+That counts too.

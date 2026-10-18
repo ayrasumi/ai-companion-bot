@@ -134,6 +134,7 @@ El bot en sí no cuesta nada. Lo único que se paga es el modelo:
 ## Licencia
 
 **Ayra Source License 1.0** — uso personal y educativo libre; uso comercial
-requiere autorización. Texto completo en [`LICENSE`](LICENSE).
+requiere autorización.
+Texto completo: [English](LICENSE) · [Español](LICENSE.es.md).
 
 © 2026 Ayra. Todos los derechos reservados.

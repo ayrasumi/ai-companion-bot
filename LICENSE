@@ -1,87 +1,69 @@
-# Licencia de código fuente — Ayra
+# Ayra Source License 1.0
 
-**Versión 1.0 — Octubre 2026**
+**Version 1.0 — October 2026**
 
-Copyright © 2026 **Ayra**. Todos los derechos reservados.
+Copyright © 2026 **Ayra**. All rights reserved.
 
----
-
-## 1. Titularidad
-
-El código, la documentación y los materiales de este repositorio son obra
-original de **Ayra** y están protegidos por las leyes de derecho de autor
-aplicables.
-
-La autoría se acredita de forma verificable mediante el historial de
-commits del repositorio, que registra fecha y orden de cada contribución.
+[Español](LICENSE.es.md)
 
 ---
 
-## 2. Usos permitidos sin autorización
+## 1. Ownership
 
-Se permite, de forma gratuita:
+The code, documentation and materials in this repository are the original
+work of **Ayra** and are protected by applicable copyright law.
 
-- **Leer** el código y estudiarlo.
-- **Ejecutarlo** en tu propio equipo con fines personales, de aprendizaje
-  o de evaluación.
-- **Modificarlo** para uso personal.
-- **Compartir el enlace** al repositorio original.
-
-En todos estos casos debe conservarse el aviso de copyright y la mención
-de autoría.
+Authorship is verifiable through the repository's commit history, which
+records the date and order of every contribution.
 
 ---
 
-## 3. Usos que requieren licencia comercial
+## 2. Permitted without authorization
 
-Necesitas autorización escrita previa para:
+The following is allowed, free of charge:
 
-- Usar el código en un producto o servicio que genere ingresos.
-- Desplegarlo en servidores de clientes o de terceros.
-- Redistribuirlo, venderlo o incluirlo en otro paquete de software.
-- Ofrecerlo como servicio alojado (SaaS).
-- Usarlo internamente en una organización con fines comerciales.
+- **Reading** and studying the code.
+- **Running** it on your own machine for personal, learning or evaluation
+  purposes.
+- **Modifying** it for personal use.
+- **Sharing the link** to the original repository.
 
-Para licencias comerciales: contacto a través del repositorio.
-
----
-
-## 4. Restricciones
-
-- **No** se permite eliminar ni alterar los avisos de autoría.
-- **No** se permite reclamar la autoría del código.
-- **No** se permite usar el nombre **Ayra** para promocionar productos
-  derivados sin autorización.
+In all of these cases the copyright notice and attribution must be retained.
 
 ---
 
-## 5. Sin garantía
+## 3. Uses requiring a commercial license
 
-El software se entrega **«tal cual»**, sin garantía de ningún tipo, expresa
-o implícita, incluyendo —sin limitarse a— garantías de comerciabilidad,
-idoneidad para un fin particular y no infracción.
+Prior written authorization is required to:
 
-En ningún caso la autora será responsable de daños directos, indirectos,
-incidentales o consecuentes derivados del uso del software.
+- Use the code in a product or service that generates revenue.
+- Deploy it on client or third-party servers.
+- Redistribute, sell, or bundle it into other software.
+- Offer it as a hosted service (SaaS).
+- Use it internally within an organization for commercial purposes.
 
----
-
-## 6. Nota sobre patentes
-
-El derecho de autor protege el **código** desde el momento en que se escribe,
-sin registro ni pago. Es la protección real y aplicable aquí.
-
-Una patente de software es otra cosa: cuesta entre miles y decenas de miles
-de dólares, tarda años, y exige demostrar novedad técnica frente a todo lo
-publicado antes. No es el instrumento adecuado para un proyecto de este tipo.
-
-Lo que sí protege comercialmente:
-
-1. Este aviso de copyright en cada archivo.
-2. Un historial de commits público con fecha (prueba de autoría).
-3. Una licencia clara que impide el uso comercial sin permiso.
-4. No publicar el código de los productos que se vendan.
+For commercial licensing: open an issue in the repository.
 
 ---
 
-*Para consultas sobre licenciamiento: abrir un issue en el repositorio.*
+## 4. Restrictions
+
+- You may **not** remove or alter the attribution notices.
+- You may **not** claim authorship of the code.
+- You may **not** use the name **Ayra** to promote derivative products
+  without authorization.
+
+---
+
+## 5. No warranty
+
+The software is provided **"as is"**, without warranty of any kind, express
+or implied, including but not limited to warranties of merchantability,
+fitness for a particular purpose and non-infringement.
+
+In no event shall the author be liable for any direct, indirect, incidental
+or consequential damages arising from the use of the software.
+
+---
+
+*For licensing enquiries: open an issue in the repository.*
